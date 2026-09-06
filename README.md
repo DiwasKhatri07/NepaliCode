@@ -138,7 +138,7 @@ Useful contribution areas include Nepali language design, compiler/runtime corre
 
 NepaliCode is maintained by **Diwas Khatri** and the NepaliSource community.
 
-- GitHub: [@diwaskhatri](https://github.com/diwaskhatri)
+- GitHub: [@diwaskhatri](https://github.com/diwaskhatri07)
 - Organization: [NepaliSource](https://github.com/NepaliSource)
 - Repository: [NepaliSource/NepaliCode](https://github.com/NepaliSource/NepaliCode)
 - Project focus: Nepali programming education, language tooling, and accessible mobile development
