@@ -1,0 +1,66 @@
+{
+  "name": "nepalicode-language-support",
+  "displayName": "NepaliCode Language Support",
+  "description": "Syntax highlighting and editor support for NepaliCode .np programs.",
+  "version": "0.1.0",
+  "publisher": "nepalicode",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NepaliSource/NepaliCode.git",
+    "directory": "extensions/nepalicode"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "keywords": [
+    "NepaliCode",
+    "NepaliLang",
+    "Nepali",
+    "programming language",
+    "syntax highlighting"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "nepalicode",
+        "aliases": [
+          "NepaliCode",
+          "NepaliLang",
+          "nepalicode"
+        ],
+        "extensions": [
+          ".np"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "nepalicode",
+        "scopeName": "source.nepalicode",
+        "path": "./syntaxes/nepalicode.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "nepalicode",
+        "path": "./snippets/nepalicode.json"
+      }
+    ],
+    "configuration": {
+      "title": "NepaliCode",
+      "properties": {
+        "nepalicode.editor.indentSize": {
+          "type": "number",
+          "default": 4,
+          "description": "Number of spaces used for NepaliCode indentation."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "NepaliCode",
+  "scopeName": "source.nepalicode",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#function-definitions" },
+    { "include": "#keywords" },
+    { "include": "#constants" },
+    { "include": "#numbers" },
+    { "include": "#builtins" },
+    { "include": "#modules" },
+    { "include": "#operators" },
+    { "include": "#decorators" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.nepalicode",
+          "match": "#.*$"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.nepalicode",
+          "begin": "\\\"",
+          "end": "\\\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.nepalicode",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.nepalicode",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.nepalicode",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "function-definitions": {
+      "patterns": [
+        {
+          "name": "meta.function.definition.nepalicode",
+          "match": "\\b(kaam|def)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+          "captures": {
+            "1": { "name": "storage.type.function.nepalicode" },
+            "2": { "name": "entity.name.function.nepalicode" }
+          }
+        },
+        {
+          "name": "entity.name.function.nepalicode",
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*(?=\\s*\\()"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.nepalicode",
+          "match": "\\b(yedi|natra|natabhaye|athawa|jabasamma|ko_lagi|ma|kaam|def|firta|return|kakshya|class|lyau|import|bata|from|koshish|try|samau|except|antya|finally|uthau|raise|bhitra|with|ra|and|wa|or|hoina|not|rok|break|jaari|continue|chhoda|pass)\\b"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.language.nepalicode",
+          "match": "\\b(sacho|True|jhut|False|khali|None)\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.nepalicode",
+          "match": "\\b(?:0[bB][01]+|0[oO][0-7]+|0[xX][0-9A-Fa-f]+|(?:[0-9]+(?:\\.[0-9]*)?|\\.[0-9]+)(?:[eE][+-]?[0-9]+)?)\\b"
+        }
+      ]
+    },
+    "builtins": {
+      "patterns": [
+        {
+          "name": "support.function.builtin.nepalicode",
+          "match": "\\b(print|dekha|range|len|type|input|ank|suchi|kosh|bool|shabda|dashamlav|jod|ghata|guna|bhag)\\b"
+        }
+      ]
+    },
+    "modules": {
+      "patterns": [
+        {
+          "name": "support.type.module.nepalicode",
+          "match": "\\b(ganit|samaya|random|text|regex|json|csv|file|folder|path|system|process|env|terminal|log|config|anurodh|url|web|browser|automation|database|network|email|zip|hash|base|suraksha|command|platform)\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.nepalicode",
+          "match": "(?:==|!=|<=|>=|//|\\*\\*|=>|[-+*/%=<>])"
+        }
+      ]
+    },
+    "decorators": {
+      "patterns": [
+        {
+          "name": "entity.name.function.decorator.nepalicode",
+          "match": "@[A-Za-z_][A-Za-z0-9_.]*"
+        }
+      ]
+    }
+  }
+}
