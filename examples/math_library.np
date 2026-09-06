@@ -1,0 +1,9 @@
+# Math library test
+import ganit
+
+print(ganit.jod(3, 4))
+print(ganit.ghata(10, 3))
+print(ganit.guna(5, 6))
+print(ganit.bhag(20, 4))
+print(ganit.sqrt(25))
+print(ganit.power(2, 3))

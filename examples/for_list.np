@@ -1,0 +1,4 @@
+# For loop with list
+items = [10, 20, 30]
+for item in items:
+    print(item)

@@ -1,0 +1,9 @@
+# Nepali condition test
+score = 85
+
+yedi score >= 90:
+    print("A")
+natabhaye score >= 80:
+    print("B")
+natra:
+    print("C")

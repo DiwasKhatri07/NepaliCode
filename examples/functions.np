@@ -1,0 +1,5 @@
+# Function examples
+kaam jod(a, b):
+    firta a + b
+
+print(jod(3, 4))

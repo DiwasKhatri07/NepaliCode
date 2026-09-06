@@ -1,0 +1,3 @@
+# Map examples
+user = {"name": "Diwas", "country": "Nepal"}
+print(user)

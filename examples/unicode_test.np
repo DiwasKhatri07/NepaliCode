@@ -1,0 +1,6 @@
+# Unicode identifier test
+नाम = "Diwas"
+शहर = "काठमाडौं"
+
+print(नाम)
+print(शहर)

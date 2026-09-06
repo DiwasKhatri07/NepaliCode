@@ -1,0 +1,7 @@
+# Basic arithmetic test from specification
+a = yo(3)
+b = yo(4)
+
+c = a + b
+
+print(c)

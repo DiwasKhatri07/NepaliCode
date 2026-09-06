@@ -1,0 +1,4 @@
+# List operations
+items = [1, 2, 3]
+print(items)
+print(len(items))

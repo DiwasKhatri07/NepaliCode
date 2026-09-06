@@ -1,0 +1,7 @@
+# Condition examples
+umar = 20
+
+yedi umar >= 18:
+    print("Adult")
+natra:
+    print("Minor")

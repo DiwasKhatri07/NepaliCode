@@ -1,0 +1,10 @@
+# Variable examples
+naam = "Diwas"
+umar = 20
+height = 5.8
+active = True
+
+print(naam)
+print(umar)
+print(height)
+print(active)

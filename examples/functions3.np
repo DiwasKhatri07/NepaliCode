@@ -1,0 +1,6 @@
+# Simple function test
+def test():
+    return 42
+
+result = test()
+print(result)
