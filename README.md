@@ -121,6 +121,101 @@ ko_lagi i ma range(1, 6):
     print(i)
 ```
 
+## 🇳🇵 नेपाली Quick Start Tutorial
+
+यो छोटो tutorial ले NepaliCode मा पहिलो `.np` program कसरी बनाउने, चलाउने, र विस्तार गर्ने भनेर देखाउँछ। NepaliCode अहिले alpha चरणमा भएकाले केही command र module हरू experimental वा planned हुन सक्छन्।[1]
+
+### १. Project तयार गर्नुहोस्
+
+पहिले NepaliCode project को folder बनाउनुहोस् र एउटा `main.np` file सिर्जना गर्नुहोस्:
+
+```bash
+mkdir mero-project
+cd mero-project
+touch main.np
+```
+
+यदि package workflow प्रयोग गर्न चाहनुहुन्छ भने NPPM बाट project सुरु गर्न सक्नुहुन्छ:
+
+```bash
+nppm init
+```
+
+### २. पहिलो program लेख्नुहोस्
+
+`main.np` मा तलको code राख्नुहोस्। `print()` ले terminal मा message देखाउँछ।
+
+```nepalicode
+naam = "नेपाल"
+print("नमस्ते", naam)
+```
+
+### ३. Program चलाउनुहोस्
+
+Project folder बाट `.np` file चलाउनुहोस्:
+
+```bash
+nepali run main.np
+```
+
+अपेक्षित output:
+
+```text
+नमस्ते नेपाल
+```
+
+Interactive प्रयोगका लागि REPL खोल्न सकिन्छ:
+
+```bash
+nepali repl
+```
+
+### ४. Variable र गणना प्रयोग गर्नुहोस्
+
+NepaliCode मा variable assignment सरल छ। `ganit` जस्तो standard-library module प्रयोग गर्ने direction पनि project notes मा प्रस्तावित छ।
+
+```nepalicode
+pahilo = 12
+dosro = 8
+jamma = pahilo + dosro
+
+print("जम्मा:", jamma)
+```
+
+### ५. निर्णय र loop लेख्नुहोस्
+
+`yedi` को अर्थ `if`, `natra` को अर्थ `else`, र `ko_lagi` को अर्थ `for` हो।
+
+```nepalicode
+umera = 20
+
+yedi umera >= 18:
+    print("तपाईं वयस्क हुनुहुन्छ")
+natra:
+    print("तपाईं अझै नाबालिग हुनुहुन्छ")
+
+ko_lagi sankhya ma range(1, 4):
+    print("गन्ती:", sankhya)
+```
+
+### ६. Function बनाएर code पुनः प्रयोग गर्नुहोस्
+
+Function बनाउन `kaam` र value फर्काउन `firta` प्रयोग गर्नुहोस्:
+
+```nepalicode
+kaam swagat(naam):
+    firta "नमस्ते " + naam
+
+sandesh = swagat("साथी")
+print(sandesh)
+```
+
+### ७. अर्को चरण
+
+अब तपाईंले `lyau` बाट module import गर्न, `koshish`/`samau` बाट error handle गर्न, `file` बाट notes save गर्न, र `anurodh` बाट HTTP request प्रयोग गर्न सक्नुहुन्छ। Project मा भएका advanced examples हेर्नुहोस्, अनि आफ्नो syntax example, test, वा documentation contribution का रूपमा पठाउनुहोस्।
+
+> **ध्यान दिनुहोस्:** यो tutorial को भाषा र code examples NepaliCode को supplied design notes मा आधारित छन्। Runtime मा उपलब्ध command वा module फरक हुन सक्छ, त्यसैले प्रयोग गर्दा project को current implementation र release notes पनि जाँच गर्नुहोस्.[1]
+
 ### 🔥 Advanced `.np` examples
 
 The following examples show the intended direction of NepaliCode beyond basic expressions. They are useful as language-design references and learning examples; module APIs may remain experimental or planned while the runtime is still in alpha.[1]
