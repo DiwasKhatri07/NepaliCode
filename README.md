@@ -375,6 +375,21 @@ NepaliCode source
 
 The planned standard-library direction includes `ganit`, `samaya`, `json`, `file`, `folder`, `anurodh`, `web`, `browser`, `automation`, `database`, `network`, and other practical modules. For example, the `anurodh` HTTP/API interface is designed around familiar operations such as `get`, `post`, `put`, `patch`, `delete`, `download`, and `upload`.[1]
 
+## 🧩 VS Code syntax highlighting
+
+NepaliCode now includes a lightweight VS Code extension integration for `.np` files. The extension registers the `NepaliCode` language mode, adds TextMate syntax highlighting for Nepali and English keywords, functions, strings, numbers, constants, operators, comments, built-ins, and modules, and provides editor conveniences such as auto-closing brackets, indentation rules, folding markers, and starter snippets.
+
+The extension source lives in [`extensions/nepalicode`](extensions/nepalicode). To package and install it locally:
+
+```bash
+npm install --global @vscode/vsce
+cd extensions/nepalicode
+vsce package
+code --install-extension nepalicode-language-support-0.1.0.vsix
+```
+
+After installation, open any `.np` file and select **NepaliCode** as the language mode if VS Code does not detect it automatically. The extension provides editor highlighting only; execution still belongs to the NepaliCode runtime and CLI.
+
 ## 🛠️ Technology stack
 
 NepaliCode is an Android Studio project built with **Kotlin**, **Jetpack Compose**, **Material 3**, **AndroidX**, and **Gradle Kotlin DSL**. The UI and language engine are separated so that Android presentation work can evolve independently from language tooling.

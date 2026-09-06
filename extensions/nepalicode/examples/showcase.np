@@ -1,0 +1,21 @@
+# NepaliCode VS Code syntax showcase
+lyau anurodh
+
+kaam fetch_title(url):
+    koshish:
+        res = anurodh.get(url)
+        yedi res.status == 200:
+            firta res.text
+        natra:
+            firta khali
+    samau error:
+        print("Network error:", error)
+    antya:
+        print("Request complete")
+
+ko_lagi item ma range(1, 4):
+    print(item)
+
+sacho_result = sacho
+jhut_result = jhut
+print(fetch_title("https://example.com"))

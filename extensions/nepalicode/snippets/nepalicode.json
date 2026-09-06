@@ -1,0 +1,59 @@
+{
+  "Function": {
+    "prefix": "kaam",
+    "body": [
+      "kaam ${1:function_name}(${2:args}):",
+      "    ${3:# function body}",
+      "    firta ${4:value}"
+    ],
+    "description": "Create a NepaliCode function"
+  },
+  "If / else": {
+    "prefix": "yedi",
+    "body": [
+      "yedi ${1:condition}:",
+      "    ${2:# true branch}",
+      "natra:",
+      "    ${3:# false branch}"
+    ],
+    "description": "Create a yedi / natra conditional"
+  },
+  "For loop": {
+    "prefix": "kolagi",
+    "body": [
+      "ko_lagi ${1:item} ma ${2:items}:",
+      "    ${3:# loop body}"
+    ],
+    "description": "Create a NepaliCode for loop"
+  },
+  "Import module": {
+    "prefix": "lyau",
+    "body": [
+      "lyau ${1:module_name}"
+    ],
+    "description": "Import a NepaliCode module"
+  },
+  "Try / except": {
+    "prefix": "koshish",
+    "body": [
+      "koshish:",
+      "    ${1:# protected code}",
+      "samau ${2:error}:",
+      "    ${3:print(error)}",
+      "antya:",
+      "    ${4:# cleanup}"
+    ],
+    "description": "Create NepaliCode error handling"
+  },
+  "HTTP request": {
+    "prefix": "anurodhget",
+    "body": [
+      "lyau anurodh",
+      "",
+      "res = anurodh.get(\"${1:https://example.com}\")",
+      "print(res.status)",
+      "print(res.text)"
+    ],
+    "description": "Create an anurodh HTTP GET example"
+  }
+}
