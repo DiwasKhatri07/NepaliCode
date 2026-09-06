@@ -121,6 +121,121 @@ ko_lagi i ma range(1, 6):
     print(i)
 ```
 
+### 🔥 Advanced `.np` examples
+
+The following examples show the intended direction of NepaliCode beyond basic expressions. They are useful as language-design references and learning examples; module APIs may remain experimental or planned while the runtime is still in alpha.[1]
+
+#### HTTP and JSON-style API work with `anurodh`
+
+```nepalicode
+lyau anurodh
+
+kaam fetch_title(url):
+    koshish:
+        res = anurodh.get(url)
+        yedi res.status == 200:
+            firta res.text
+        natra:
+            print("Request failed:", res.status)
+            firta khali
+    samau error:
+        print("Network error:", error)
+        firta khali
+    antya:
+        print("Request complete")
+
+body = fetch_title("https://example.com")
+print(body)
+```
+
+#### File operations and reusable functions
+
+```nepalicode
+lyau file
+
+kaam save_note(path, message):
+    file.write(path, message)
+    print("Saved:", path)
+
+kaam read_note(path):
+    yedi file.exists(path):
+        firta file.read(path)
+    firta "No note found"
+
+save_note("notes.txt", "Namaste Nepal")
+print(read_note("notes.txt"))
+```
+
+#### Browser automation workflow
+
+```nepalicode
+lyau browser
+
+page = browser.khol("https://example.com")
+page.click("Login")
+page.type("email", "demo@example.com")
+page.click("Submit")
+page.wait(2)
+page.screenshot("login-result.png")
+page.close()
+```
+
+Browser automation is intended for authorized development, QA, testing, and personal workflows. Always respect the target service's terms and permissions.
+
+#### Database access
+
+```nepalicode
+lyau database
+
+db = database.open("app.db")
+rows = db.query("SELECT * FROM users")
+
+ko_lagi user ma rows:
+    print(user)
+
+db.close()
+```
+
+#### Nepali-style error handling and conditions
+
+```nepalicode
+koshish:
+    age = 21
+    yedi age >= 18 ra age < 60:
+        print("Working age")
+    athawa age >= 60:
+        print("Senior citizen")
+    natra:
+        print("Underage")
+samau error:
+    print("Could not evaluate age:", error)
+antya:
+    print("Finished")
+```
+
+#### A small package workflow
+
+```bash
+nppm init
+nppm install anurodh
+nppm list
+nepali run main.np
+nepali test
+nepali lint
+nepali format
+```
+
+A project can declare its metadata in `nepali.toml`:
+
+```toml
+[project]
+name = "myapp"
+version = "0.1.0"
+language = "nepalicode"
+
+[dependencies]
+```
+
 > **Status note:** NepaliCode is in an early/alpha stage. Examples and APIs in the design notes may be implemented, experimental, or planned; they should not be read as a promise that every module is available in the current build.[1]
 
 ## 🇳🇵 Nepali-inspired syntax
