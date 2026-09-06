@@ -83,6 +83,71 @@ The NPPM screen presents NepaliCode packages such as `anurodh`, `web`, `browser`
   <img src="docs/assets/screenshots/05-nppm.jpg" alt="NepaliCode NPPM package manager with installed packages" width="300" />
 </p>
 
+## 🌟 Latest mobile features
+
+The latest mobile build extends NepaliCode beyond the editor and REPL with a more complete learning and automation workspace. The new screens document the features that contributors can explore in the Android app.
+
+<p align="center">
+  <img src="docs/assets/nepalicode-mobile-showcase-v2.gif" alt="Animated showcase of the latest NepaliCode mobile features" width="300" />
+</p>
+
+| Feature | What is now documented in the mobile UI |
+|---|---|
+| **Command palette and actions** | Searchable actions for saving the active file, creating a new `.np` file, deleting source files, and AI-assisted actions such as Explain Code and Optimize & Modernize. |
+| **Code Examples & Demos** | Guided examples for object-oriented classes, CSV and filesystem work, security hashing, and `nepali.toml` project configuration. |
+| **High-density editor** | A mobile-first editor with tabs, run controls, syntax-aware source editing, quick symbol/operator keys, terminal access, and the Code, Web/Auto, Files, NPPM, and Guide destinations. |
+| **HTTP and automation** | The in-app direction combines the `anurodh` HTTP interface with browser automation workflows and visible terminal output. |
+| **NPPM package manager** | Package cards and dependency metadata connect the mobile workspace to `nepali.toml`, standard-library modules, and the wider NepaliCode ecosystem. |
+| **Syntax Reference** | A built-in guide credits Diwas Khatri, explains dual Nepali/English syntax, maps keywords such as `kaam` ↔ `def`, and describes the compiler/tokenizer, HTTP Anurodh, browser automation, and SQLite direction. |
+
+### 1. Mobile editor and command palette
+
+The action palette makes common mobile workflows discoverable: save the active file, create a new `.np` source file, remove a source file, and explore AI-assisted code explanations or modernization actions.
+
+<p align="center">
+  <img src="docs/assets/screenshots-v2/01-mobile-editor.jpg" alt="NepaliCode mobile editor with searchable command palette" width="300" />
+</p>
+
+### 2. Code Examples & Demos
+
+The examples catalog turns the mobile app into a guided learning surface with focused scripts for `kakshya` classes, CSV and filesystem operations, `suraksha` cryptography, and `nepali.toml` project manifests.
+
+<p align="center">
+  <img src="docs/assets/screenshots-v2/02-code-examples.jpg" alt="NepaliCode Code Examples and Demos dialog" width="300" />
+</p>
+
+### 3. Editor and terminal workflow
+
+The editor keeps source code, run controls, the Nepali terminal, quick-input keys, and bottom navigation close together so a learner can move from code to output without leaving the mobile workspace.
+
+<p align="center">
+  <img src="docs/assets/screenshots-v2/03-editor-terminal.jpg" alt="NepaliCode editor and terminal workflow" width="300" />
+</p>
+
+### 4. Source execution state
+
+This screen documents the run-oriented editor state: a selected `.np` file, the high-density code surface, execution controls, and the terminal/navigation shell used to inspect program results.
+
+<p align="center">
+  <img src="docs/assets/screenshots-v2/04-editor-output.jpg" alt="NepaliCode source execution and output screen" width="300" />
+</p>
+
+### 5. Package management
+
+NPPM presents packages and dependency metadata in a mobile-friendly card layout. The package workflow is designed to connect installed modules with a project’s `nepali.toml` manifest.
+
+<p align="center">
+  <img src="docs/assets/screenshots-v2/05-package-manager.jpg" alt="NepaliCode NPPM package manager screen" width="300" />
+</p>
+
+### 6. NepaliLang Syntax Reference
+
+The built-in reference screen documents the project identity and language philosophy. It identifies **Diwas Khatri** as lead developer, describes the `.np` language as a dual Nepali/English syntax experience, and highlights the compiler/tokenizer, HTTP Anurodh, browser automation, and SQLite engine direction.
+
+<p align="center">
+  <img src="docs/assets/screenshots-v2/06-syntax-reference.jpg" alt="NepaliCode Syntax Reference guide credited to Diwas Khatri" width="300" />
+</p>
+
 ## 🧪 Language examples
 
 A small program is intentionally familiar:
@@ -443,17 +508,24 @@ Contributions are welcome across language design, compiler/runtime correctness, 
 
 Focused pull requests are easier to review. A useful language change normally includes a small example, parser coverage, interpreter behavior, diagnostics, and documentation for learners.
 
-## 👨‍💻 Maintainers and links
+## 👨‍💻 Maintainers, organization, and credits
 
-NepaliCode is maintained by **Diwas Khatri** and the NepaliSource community.
+NepaliCode is developed by **Diwas Khatri** with the **NepaliSource** organization and community. The project combines language design, Android engineering, compiler/runtime work, documentation, and developer education in one open-source effort.
 
-| Resource | Link |
+| Public project information | Details |
 |---|---|
-| Lead developer | [@diwaskhatri07](https://github.com/diwaskhatri07) |
-| Organization | [NepaliSource](https://github.com/NepaliSource) |
-| Repository | [NepaliSource/NepaliCode](https://github.com/NepaliSource/NepaliCode) |
-| Releases | [GitHub Releases](https://github.com/NepaliSource/NepaliCode/releases) |
-| License | [MIT License](LICENSE) |
+| **Lead developer** | Diwas Khatri |
+| **Developer profile** | [@diwaskhatri07](https://github.com/diwaskhatri07) |
+| **Public contact shown in the app guide** | `diwaskhatri935@gmail.com` |
+| **Organization** | [NepaliSource](https://github.com/NepaliSource) |
+| **Repository** | [NepaliSource/NepaliCode](https://github.com/NepaliSource/NepaliCode) |
+| **Language identity** | NepaliLang / NepaliCode, `.np` source files |
+| **Application package** | `com.nepalicode.dev` |
+| **Android application direction** | High-density mobile IDE, compiler/tokenizer, dual Nepali/English syntax, HTTP Anurodh, browser automation, and SQLite engine |
+| **Release channel** | [GitHub Releases](https://github.com/NepaliSource/NepaliCode/releases) |
+| **License** | [MIT License](LICENSE) |
+
+The project welcomes contributions from language designers, Android developers, compiler/runtime contributors, educators, translators, documentation writers, and anyone who wants to make Nepali-first programming more accessible. Please credit new examples and feature work clearly, keep experimental APIs labeled, and follow the repository contribution guidelines.
 
 ## 🔖 Project tags
 
@@ -467,6 +539,12 @@ NepaliCode is maintained by **Diwas Khatri** and the NepaliSource community.
 [4]: https://ibb.co/XkrVJSW5 "NepaliCode editor screenshot"
 [5]: https://ibb.co/7Htb6Tz "NepaliCode diagnostics screenshot"
 [6]: https://ibb.co/VprTJCnH "NepaliCode NPPM screenshot"
+[7]: https://ibb.co/qYPjNx6M "NepaliCode latest mobile editor screenshot"
+[8]: https://ibb.co/gZHPLCt4 "NepaliCode Code Examples and Demos screenshot"
+[9]: https://ibb.co/XZHG2wCp "NepaliCode editor and terminal screenshot"
+[10]: https://ibb.co/gbk14t3w "NepaliCode source execution screenshot"
+[11]: https://ibb.co/SDxzHqnK "NepaliCode package manager screenshot"
+[12]: https://ibb.co/ccstpVR2 "NepaliCode Syntax Reference screenshot"
 
 <p align="center">
   <img src="docs/assets/nepalicode-banner.svg" alt="NepaliCode footer banner" width="92%" />
