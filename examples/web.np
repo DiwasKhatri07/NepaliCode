@@ -1,0 +1,4 @@
+lyau web
+
+dekha("1. Fetching web page from https://example.com ...")
+page = web.get("https://example.com")
