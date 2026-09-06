@@ -1,0 +1,41 @@
+name: Bug report
+description: Report a reproducible problem in NepaliCode.
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Please search existing issues before opening a duplicate.
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include the smallest reliable reproduction.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: NepaliCode version
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Android version, device/emulator, and relevant configuration.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Remove API keys and personal data before sharing.

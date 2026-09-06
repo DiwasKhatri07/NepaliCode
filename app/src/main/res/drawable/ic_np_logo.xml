@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Rounded Background Square -->
+    <path
+        android:pathData="M8,4 h32 a4,4 0 0 1 4,4 v32 a4,4 0 0 1 -4,4 h-32 a4,4 0 0 1 -4,-4 v-32 a4,4 0 0 1 4,-4 z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:angle="135"
+                android:startColor="#1E1B2E"
+                android:endColor="#0F0D17"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+
+    <!-- Border glow -->
+    <path
+        android:pathData="M8,4 h32 a4,4 0 0 1 4,4 v32 a4,4 0 0 1 -4,4 h-32 a4,4 0 0 1 -4,-4 v-32 a4,4 0 0 1 4,-4 z"
+        android:strokeWidth="1.5"
+        android:strokeColor="#D0BCFF" />
+
+    <!-- Left Bracket < -->
+    <path
+        android:pathData="M14,19 L8,24 L14,29"
+        android:strokeWidth="2.5"
+        android:strokeColor="#D0BCFF"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Letter 'n' in Cyan -->
+    <path
+        android:pathData="M19,29 V21 C19,19 23,19 23,22 V29"
+        android:strokeWidth="2.2"
+        android:strokeColor="#7CE8FF"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Letter 'p' in Coral / Himalayan Crimson -->
+    <path
+        android:pathData="M27,33 V21 H31 C33.5,21 33.5,27 31,27 H27"
+        android:strokeWidth="2.2"
+        android:strokeColor="#F2B8B5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Right Slash Bracket /> -->
+    <path
+        android:pathData="M37,17 L33,31 M35,19 L41,24 L35,29"
+        android:strokeWidth="2.2"
+        android:strokeColor="#A8C7FA"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Tiny Flag Accent Dot -->
+    <path
+        android:pathData="M24,10 L27,13 L24,14 Z"
+        android:fillColor="#FF897D" />
+</vector>

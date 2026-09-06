@@ -1,0 +1,62 @@
+name: Refresh repository metrics
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/30 * * * *'
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  refresh-metrics:
+    name: Refresh transparent project metrics
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Collect source metrics
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p metrics
+          kotlin_files=$(find app/src -type f -name '*.kt' | wc -l | tr -d ' ')
+          xml_files=$(find app/src -type f -name '*.xml' | wc -l | tr -d ' ')
+          kotlin_lines=$(find app/src -type f -name '*.kt' -print0 | xargs -0 cat | wc -l | tr -d ' ')
+          xml_lines=$(find app/src -type f -name '*.xml' -print0 | xargs -0 cat | wc -l | tr -d ' ')
+          total_lines=$((kotlin_lines + xml_lines))
+          stars=$(gh api "repos/${REPOSITORY}" --jq '.stargazers_count')
+          forks=$(gh api "repos/${REPOSITORY}" --jq '.forks_count')
+          open_issues=$(gh api "repos/${REPOSITORY}" --jq '.open_issues_count')
+          default_branch=$(gh api "repos/${REPOSITORY}" --jq '.default_branch')
+          generated_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+          cat > metrics/repository-stats.json <<EOF
+          {
+            "generated_at": "${generated_at}",
+            "repository": "${REPOSITORY}",
+            "source": {"kotlin_files": ${kotlin_files}, "xml_files": ${xml_files}, "kotlin_lines": ${kotlin_lines}, "xml_lines": ${xml_lines}, "total_lines": ${total_lines}},
+            "github": {"stars": ${stars}, "forks": ${forks}, "open_issues": ${open_issues}, "default_branch": "${default_branch}"},
+            "note": "Metrics are read from GitHub and the checked-in source; no artificial traffic or engagement is generated."
+          }
+          EOF
+
+      - name: Commit changed metrics only
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add metrics/repository-stats.json
+          if git diff --cached --quiet; then
+            echo 'No metric changes to commit.'
+          else
+            git commit -m 'chore: refresh repository metrics'
+            git push
+          fi

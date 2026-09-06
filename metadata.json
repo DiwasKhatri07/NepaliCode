@@ -1,0 +1,6 @@
+{
+  "name": "NepaliCode",
+  "description": "Mobile Code IDE & Compiler for NepaliLang (.np) with syntax highlighting, live REPL, web automation, Python-friendly APIs, code suggestions, and package manager.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,8 @@
+App name: NepaliCode
+Application ID: com.nepalicode.dev
+Namespace: com.nepalicode.dev
+Owner: NepaliCode Development Team
+Version name: 1.0.0
+Version code: 1
+Launcher icon: ic_nepalicode_logo.jpg
+Source archive: nepalicode(1).zip
