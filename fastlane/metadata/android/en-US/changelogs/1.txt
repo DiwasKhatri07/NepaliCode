@@ -5,3 +5,4 @@ NepaliCode 1.0.0
 - Nepali lexer, parser, interpreter, linter, and standard library foundation
 - Project file manager, editor tooling, themes, references, and terminal surfaces
 - Release and debug APKs with package ID com.nepalicode.dev
+- Dev BY GEMEINI AND DIWAS
